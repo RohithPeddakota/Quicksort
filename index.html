@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Quicksort Visualizer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <header class="glass-panel">
+            <h1>Quicksort <span>Visualizer</span></h1>
+            <div class="controls">
+                <div class="control-group">
+                    <label for="sizeSlider">Array Size</label>
+                    <input type="range" id="sizeSlider" min="5" max="50" value="20">
+                </div>
+                <div class="control-group">
+                    <label for="speedSlider">Speed</label>
+                    <input type="range" id="speedSlider" min="1" max="100" value="80">
+                </div>
+                <div class="control-group">
+                    <label for="customArray">Custom Array</label>
+                    <input type="text" id="customArray" placeholder="e.g. 5,12,3"
+                        style="background: rgba(0,0,0,0.2); color: white; border: 1px solid var(--glass-border); padding: 4px 8px; border-radius: 4px; font-family: inherit; width: 150px;">
+                </div>
+                <div class="button-group">
+                    <button id="generateBtn" class="btn secondary">Generate Random</button>
+                    <button id="loadCustomBtn" class="btn secondary">Load Custom</button>
+                    <button id="sortBtn" class="btn primary">Start Sort</button>
+                </div>
+            </div>
+        </header>
+
+        <main class="visualization-area">
+            <div id="arrayContainer"></div>
+        </main>
+
+        <div class="legend glass-panel">
+            <div class="legend-item">
+                <div class="color-box default"></div> Unsorted
+            </div>
+            <div class="legend-item">
+                <div class="color-box compare"></div> Comparing
+            </div>
+            <div class="legend-item">
+                <div class="color-box pivot"></div> Pivot
+            </div>
+            <div class="legend-item">
+                <div class="color-box sorted"></div> Sorted
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
